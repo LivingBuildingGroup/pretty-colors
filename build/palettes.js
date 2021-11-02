@@ -111,7 +111,7 @@ var createPeach8 = function createPeach8(pos) {
 };
 
 var createWine8 = function createWine8(pos) {
-  var arr = ['243, 158, 162', '227, 124, 131', '202.  99, 108', '174,  70,  83', '150,  46,  62', '132,  28,  45', '118,  15,  34', ' 93,   6,  22'];
+  var arr = ['243, 158, 162', '227, 124, 131', '202,  99, 108', '174,  70,  83', '150,  46,  62', '132,  28,  45', '118,  15,  34', ' 93,   6,  22'];
   if (isPrimitiveNumber(pos)) {
     addBright(arr, 'wine8', pos);
   }
@@ -159,7 +159,7 @@ var listBright = function listBright() {
 };
 
 var createPalette11 = function createPalette11(option) {
-  var white = '255 255 255';
+  var white = '255, 255, 255';
   var bark8 = createBark8();
   var fern8 = createFern8();
   var corn8 = createCorn8();
@@ -177,7 +177,7 @@ var createPalette11 = function createPalette11(option) {
 };
 
 var createPalette13 = function createPalette13(option) {
-  var white = '255 255 255';
+  var white = '255, 255, 255';
   var bark8 = createBark8();
   var fern8 = createFern8();
   var corn8 = createCorn8();
@@ -194,7 +194,7 @@ var createPalette13 = function createPalette13(option) {
 };
 
 var createPalette16 = function createPalette16(option) {
-  var white = '255 255 255';
+  var white = '255, 255, 255';
   var bark8 = createBark8();
   var fern8 = createFern8();
   var corn8 = createCorn8();
@@ -211,7 +211,7 @@ var createPalette16 = function createPalette16(option) {
 };
 
 var createPalette19 = function createPalette19(option) {
-  var white = '255 255 255';
+  var white = '255, 255, 255';
   var bark8 = createBark8();
   var fern8 = createFern8();
   var corn8 = createCorn8();
@@ -228,7 +228,7 @@ var createPalette19 = function createPalette19(option) {
 };
 
 var createPalette23 = function createPalette23(option) {
-  var white = '255 255 255';
+  var white = '255, 255, 255';
   var bark8 = createBark8();
   var fern8 = createFern8();
   var corn8 = createCorn8();
@@ -261,7 +261,7 @@ var selectPalette = function selectPalette(num, option) {
 };
 
 var createNamed = function createNamed(option) {
-  var white = '255 255 255';
+  var white = '255, 255, 255';
   var bark8 = createBark8();
   var fern8 = createFern8();
   var corn8 = createCorn8();
@@ -311,13 +311,13 @@ var createNamed = function createNamed(option) {
   return namedColors;
 };
 
-var createPreSetGlobalPalettes = function createPreSetGlobalPalettes() {
+var createPresetGlobalPalettes = function createPresetGlobalPalettes() {
   var colors = listBright();
-  var preSetGlobalPalettes = {};
+  var presetGlobalPalettes = {};
   colors.forEach(function (color) {
-    preSetGlobalPalettes[color] = createMonoChrome(color);
+    presetGlobalPalettes[color] = createMonoChrome(color);
   });
-  return preSetGlobalPalettes;
+  return presetGlobalPalettes;
 };
 
 module.exports = {
@@ -341,5 +341,5 @@ module.exports = {
   createPalette23: createPalette23,
   selectPalette: selectPalette,
   createNamed: createNamed,
-  createPreSetGlobalPalettes: createPreSetGlobalPalettes
+  createPresetGlobalPalettes: createPresetGlobalPalettes
 };

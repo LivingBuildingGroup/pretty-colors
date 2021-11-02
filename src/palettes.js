@@ -153,7 +153,7 @@ const createWine8 = pos => {
   const arr = [
     '243, 158, 162',
     '227, 124, 131',
-    '202.  99, 108',
+    '202,  99, 108',
     '174,  70,  83',
     '150,  46,  62',
     '132,  28,  45',
@@ -233,7 +233,7 @@ const listBright = () => {
 };
 
 const createPalette11 = option => {
-  const white     = '255 255 255';
+  const white     = '255, 255, 255';
   const bark8     = createBark8();
   const fern8     = createFern8();
   const corn8     = createCorn8();
@@ -264,7 +264,7 @@ const createPalette11 = option => {
 };
 
 const createPalette13 = option => {
-  const white     = '255 255 255';
+  const white     = '255, 255, 255';
   const bark8     = createBark8();
   const fern8     = createFern8();
   const corn8     = createCorn8();
@@ -296,7 +296,7 @@ const createPalette13 = option => {
 };
 
 const createPalette16 = option => {
-  const white     = '255 255 255';
+  const white     = '255, 255, 255';
   const bark8     = createBark8();
   const fern8     = createFern8();
   const corn8     = createCorn8();
@@ -331,7 +331,7 @@ const createPalette16 = option => {
 };
 
 const createPalette19 = option => {
-  const white     = '255 255 255';
+  const white     = '255, 255, 255';
   const bark8     = createBark8();
   const fern8     = createFern8();
   const corn8     = createCorn8();
@@ -369,7 +369,7 @@ const createPalette19 = option => {
 };
 
 const createPalette23 = option => {
-  const white     = '255 255 255';
+  const white     = '255, 255, 255';
   const bark8     = createBark8();
   const fern8     = createFern8();
   const corn8     = createCorn8();
@@ -427,7 +427,7 @@ const selectPalette = (num, option) => {
 };
 
 const createNamed = option => {
-  const white     = '255 255 255';
+  const white     = '255, 255, 255';
   const bark8     = createBark8();
   const fern8     = createFern8();
   const corn8     = createCorn8();
@@ -477,13 +477,13 @@ const createNamed = option => {
   return namedColors;
 };
 
-const createPreSetGlobalPalettes = () => {
+const createPresetGlobalPalettes = () => {
   const colors = listBright();
-  const preSetGlobalPalettes = {};
+  const presetGlobalPalettes = {};
   colors.forEach(color=>{
-    preSetGlobalPalettes[color] = createMonoChrome(color);
+    presetGlobalPalettes[color] = createMonoChrome(color);
   });
-  return preSetGlobalPalettes;
+  return presetGlobalPalettes;
 };
 
 module.exports = {
@@ -507,5 +507,5 @@ module.exports = {
   createPalette23,
   selectPalette,
   createNamed,
-  createPreSetGlobalPalettes,
+  createPresetGlobalPalettes,
 };
